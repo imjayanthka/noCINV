@@ -14,6 +14,14 @@
 		F4484F001D05B9B90050A5D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4484EFE1D05B9B90050A5D0 /* LaunchScreen.storyboard */; };
 		F4484F0B1D05B9BA0050A5D0 /* HealthAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4484F0A1D05B9BA0050A5D0 /* HealthAppTests.swift */; };
 		F4484F161D05B9BA0050A5D0 /* HealthAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4484F151D05B9BA0050A5D0 /* HealthAppUITests.swift */; };
+		F4484F2D1D05B9FA0050A5D0 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4484F2A1D05B9F10050A5D0 /* ResearchKit.framework */; };
+		F4484F2E1D05B9FA0050A5D0 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4484F2A1D05B9F10050A5D0 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F4484F331D05BA280050A5D0 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4484F321D05BA280050A5D0 /* SurveyTask.swift */; };
+		F450FA141D19B206003A6DC9 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F450FA071D19B1F9003A6DC9 /* SwiftHTTP.framework */; };
+		F450FA151D19B206003A6DC9 /* SwiftHTTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F450FA071D19B1F9003A6DC9 /* SwiftHTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F450FA191D19BFA5003A6DC9 /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450FA181D19BFA5003A6DC9 /* AEXML.swift */; };
+		F450FA1B1D19BFF6003A6DC9 /* AlgoFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450FA1A1D19BFF6003A6DC9 /* AlgoFunctions.swift */; };
+		F450FA1D1D19C2D3003A6DC9 /* XMLCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450FA1C1D19C2D3003A6DC9 /* XMLCreation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +39,99 @@
 			remoteGlobalIDString = F4484EF11D05B9B90050A5D0;
 			remoteInfo = HealthApp;
 		};
+		F4484F291D05B9F10050A5D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4484F231D05B9F10050A5D0 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		F4484F2B1D05B9F10050A5D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4484F231D05B9F10050A5D0 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		F4484F2F1D05B9FA0050A5D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4484F231D05B9F10050A5D0 /* ResearchKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		F450FA061D19B1F9003A6DC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F450F9FA1D19B1F8003A6DC9 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD901619C8D8B500DD99B6;
+			remoteInfo = SwiftHTTP;
+		};
+		F450FA081D19B1F9003A6DC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F450F9FA1D19B1F8003A6DC9 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD902119C8D8B500DD99B6;
+			remoteInfo = SwiftHTTPTests;
+		};
+		F450FA0A1D19B1F9003A6DC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F450F9FA1D19B1F8003A6DC9 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958025919E6EEEB003C8218;
+			remoteInfo = SwiftHTTPOSX;
+		};
+		F450FA0C1D19B1F9003A6DC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F450F9FA1D19B1F8003A6DC9 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958026319E6EEEB003C8218;
+			remoteInfo = SwiftHTTPOSXTests;
+		};
+		F450FA0E1D19B1F9003A6DC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F450F9FA1D19B1F8003A6DC9 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5C135EC11C4733CD00AA3A01;
+			remoteInfo = SwiftHTTPtvOS;
+		};
+		F450FA101D19B1F9003A6DC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F450F9FA1D19B1F8003A6DC9 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5C135ECA1C4733CE00AA3A01;
+			remoteInfo = SwiftHTTPtvOSTests;
+		};
+		F450FA121D19B1F9003A6DC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F450F9FA1D19B1F8003A6DC9 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5C135FA91C4737E200AA3A01;
+			remoteInfo = SwiftHTTPWatchOS;
+		};
+		F450FA161D19B206003A6DC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F450F9FA1D19B1F8003A6DC9 /* SwiftHTTP.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BFD901519C8D8B500DD99B6;
+			remoteInfo = SwiftHTTP;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F4484F311D05B9FA0050A5D0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F450FA151D19B206003A6DC9 /* SwiftHTTP.framework in Embed Frameworks */,
+				F4484F2E1D05B9FA0050A5D0 /* ResearchKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F4484EF21D05B9B90050A5D0 /* HealthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +147,12 @@
 		F4484F111D05B9BA0050A5D0 /* HealthAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4484F151D05B9BA0050A5D0 /* HealthAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthAppUITests.swift; sourceTree = "<group>"; };
 		F4484F171D05B9BA0050A5D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4484F231D05B9F10050A5D0 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../ResearchKit-master/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
+		F4484F321D05BA280050A5D0 /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
+		F450F9FA1D19B1F8003A6DC9 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = "../SwiftHTTP-master/SwiftHTTP.xcodeproj"; sourceTree = "<group>"; };
+		F450FA181D19BFA5003A6DC9 /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXML.swift; sourceTree = "<group>"; };
+		F450FA1A1D19BFF6003A6DC9 /* AlgoFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoFunctions.swift; sourceTree = "<group>"; };
+		F450FA1C1D19C2D3003A6DC9 /* XMLCreation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLCreation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +160,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F450FA141D19B206003A6DC9 /* SwiftHTTP.framework in Frameworks */,
+				F4484F2D1D05B9FA0050A5D0 /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +185,8 @@
 		F4484EE91D05B9B90050A5D0 = {
 			isa = PBXGroup;
 			children = (
+				F450F9FA1D19B1F8003A6DC9 /* SwiftHTTP.xcodeproj */,
+				F4484F231D05B9F10050A5D0 /* ResearchKit.xcodeproj */,
 				F4484EF41D05B9B90050A5D0 /* HealthApp */,
 				F4484F091D05B9BA0050A5D0 /* HealthAppTests */,
 				F4484F141D05B9BA0050A5D0 /* HealthAppUITests */,
@@ -103,6 +213,10 @@
 				F4484EFC1D05B9B90050A5D0 /* Assets.xcassets */,
 				F4484EFE1D05B9B90050A5D0 /* LaunchScreen.storyboard */,
 				F4484F011D05B9B90050A5D0 /* Info.plist */,
+				F4484F321D05BA280050A5D0 /* SurveyTask.swift */,
+				F450FA181D19BFA5003A6DC9 /* AEXML.swift */,
+				F450FA1A1D19BFF6003A6DC9 /* AlgoFunctions.swift */,
+				F450FA1C1D19C2D3003A6DC9 /* XMLCreation.swift */,
 			);
 			path = HealthApp;
 			sourceTree = "<group>";
@@ -125,6 +239,29 @@
 			path = HealthAppUITests;
 			sourceTree = "<group>";
 		};
+		F4484F241D05B9F10050A5D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4484F2A1D05B9F10050A5D0 /* ResearchKit.framework */,
+				F4484F2C1D05B9F10050A5D0 /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F450F9FB1D19B1F8003A6DC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F450FA071D19B1F9003A6DC9 /* SwiftHTTP.framework */,
+				F450FA091D19B1F9003A6DC9 /* SwiftHTTPTests.xctest */,
+				F450FA0B1D19B1F9003A6DC9 /* SwiftHTTP.framework */,
+				F450FA0D1D19B1F9003A6DC9 /* SwiftHTTPOSXTests.xctest */,
+				F450FA0F1D19B1F9003A6DC9 /* SwiftHTTP.framework */,
+				F450FA111D19B1F9003A6DC9 /* SwiftHTTPtvOSTests.xctest */,
+				F450FA131D19B1F9003A6DC9 /* SwiftHTTP.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +272,13 @@
 				F4484EEE1D05B9B90050A5D0 /* Sources */,
 				F4484EEF1D05B9B90050A5D0 /* Frameworks */,
 				F4484EF01D05B9B90050A5D0 /* Resources */,
+				F4484F311D05B9FA0050A5D0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F4484F301D05B9FA0050A5D0 /* PBXTargetDependency */,
+				F450FA171D19B206003A6DC9 /* PBXTargetDependency */,
 			);
 			name = HealthApp;
 			productName = HealthApp;
@@ -215,6 +355,16 @@
 			mainGroup = F4484EE91D05B9B90050A5D0;
 			productRefGroup = F4484EF31D05B9B90050A5D0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F4484F241D05B9F10050A5D0 /* Products */;
+					ProjectRef = F4484F231D05B9F10050A5D0 /* ResearchKit.xcodeproj */;
+				},
+				{
+					ProductGroup = F450F9FB1D19B1F8003A6DC9 /* Products */;
+					ProjectRef = F450F9FA1D19B1F8003A6DC9 /* SwiftHTTP.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F4484EF11D05B9B90050A5D0 /* HealthApp */,
@@ -223,6 +373,72 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F4484F2A1D05B9F10050A5D0 /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = F4484F291D05B9F10050A5D0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F4484F2C1D05B9F10050A5D0 /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = F4484F2B1D05B9F10050A5D0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F450FA071D19B1F9003A6DC9 /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = F450FA061D19B1F9003A6DC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F450FA091D19B1F9003A6DC9 /* SwiftHTTPTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPTests.xctest;
+			remoteRef = F450FA081D19B1F9003A6DC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F450FA0B1D19B1F9003A6DC9 /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = F450FA0A1D19B1F9003A6DC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F450FA0D1D19B1F9003A6DC9 /* SwiftHTTPOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPOSXTests.xctest;
+			remoteRef = F450FA0C1D19B1F9003A6DC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F450FA0F1D19B1F9003A6DC9 /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = F450FA0E1D19B1F9003A6DC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F450FA111D19B1F9003A6DC9 /* SwiftHTTPtvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPtvOSTests.xctest;
+			remoteRef = F450FA101D19B1F9003A6DC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F450FA131D19B1F9003A6DC9 /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = F450FA121D19B1F9003A6DC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F4484EF01D05B9B90050A5D0 /* Resources */ = {
@@ -256,8 +472,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F450FA1D1D19C2D3003A6DC9 /* XMLCreation.swift in Sources */,
+				F450FA1B1D19BFF6003A6DC9 /* AlgoFunctions.swift in Sources */,
 				F4484EF81D05B9B90050A5D0 /* ViewController.swift in Sources */,
+				F450FA191D19BFA5003A6DC9 /* AEXML.swift in Sources */,
 				F4484EF61D05B9B90050A5D0 /* AppDelegate.swift in Sources */,
+				F4484F331D05BA280050A5D0 /* SurveyTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +509,16 @@
 			isa = PBXTargetDependency;
 			target = F4484EF11D05B9B90050A5D0 /* HealthApp */;
 			targetProxy = F4484F121D05B9BA0050A5D0 /* PBXContainerItemProxy */;
+		};
+		F4484F301D05B9FA0050A5D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResearchKit;
+			targetProxy = F4484F2F1D05B9FA0050A5D0 /* PBXContainerItemProxy */;
+		};
+		F450FA171D19B206003A6DC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftHTTP;
+			targetProxy = F450FA161D19B206003A6DC9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -401,6 +631,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HealthApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaykanugo.HealthApp;
@@ -412,6 +643,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HealthApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaykanugo.HealthApp;
@@ -484,6 +716,7 @@
 				F4484F1C1D05B9BA0050A5D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4484F1D1D05B9BA0050A5D0 /* Build configuration list for PBXNativeTarget "HealthAppTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +725,7 @@
 				F4484F1F1D05B9BA0050A5D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4484F201D05B9BA0050A5D0 /* Build configuration list for PBXNativeTarget "HealthAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +734,7 @@
 				F4484F221D05B9BA0050A5D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
