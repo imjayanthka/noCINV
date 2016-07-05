@@ -45,34 +45,7 @@ func createXmlString(dataCollection: [String: String]) -> String {
     let items = records.addChild(name: "item")
     print("Count: \(dataCollection.count)")
     for (item_name, item_value) in dataCollection {
-        switch item_name {
-        case "dehydration", "anxiety", "current_smoker":
-            if item_value == "0"{
-               items.addChild(name: item_name, value: "1")
-            } else {
-                items.addChild(name: item_name, value: "0")
-            }
-        case "race":
-            switch item_value {
-            case "0":
-                items.addChild(name: item_name, value: "A")
-            case "1":
-                items.addChild(name: item_name, value: "H")
-            case "2":
-                items.addChild(name: item_name, value: "W")
-            default:
-                items.addChild(name: item_name, value: "B")
-            }
-        case "sex":
-            if item_value == "0" {
-                items.addChild(name: item_name, value: "M")
-            } else {
-               items.addChild(name: item_name, value: "F")
-            }
-        default:
-            items.addChild(name: item_name, value: item_value)
-        }
-      
+        items.addChild(name: item_name, value: item_value)
     }
     return data.xmlString
 }

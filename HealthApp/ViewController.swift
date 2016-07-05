@@ -46,7 +46,11 @@ extension ViewController : ORKTaskViewControllerDelegate {
                     if let stepResult = result as? ORKStepResult{
                         let sresult =  stepResult.firstResult
                         if let choiceResult = sresult as? ORKChoiceQuestionResult {
-                            resultCollection["\(choiceResult.identifier)"] = choiceResult.choiceAnswers![0].stringValue
+                            if choiceResult.choiceAnswers![0] is String {
+                                resultCollection["\(choiceResult.identifier)"] = choiceResult.choiceAnswers![0] as! String
+                            } else {
+                                resultCollection["\(choiceResult.identifier)"] = choiceResult.choiceAnswers![0].stringValue
+                            }
                         } else if let numAnswerResult = sresult as? ORKNumericQuestionResult {
                             resultCollection["\(numAnswerResult.identifier)"] = numAnswerResult.numericAnswer?.stringValue
                         } else if let questionAnsResult = sresult as? ORKQuestionResult {
@@ -55,7 +59,6 @@ extension ViewController : ORKTaskViewControllerDelegate {
                     }
                 }
             }
-            print(resultCollection.count)
             print(resultCollection)
             let acuteResult: Bool
             let delayedResult: Bool

@@ -10,9 +10,9 @@ import Foundation
 
 
 func delayedMEC(data: [String: String]) -> Bool{
-    if data["dehydration"] == "0" {
+    if data["dehydration"] == "1" {
         //Yes
-        if data["anxiety"] == "0" {
+        if data["anxiety"] == "1" {
             //yes
             return true
         } else {
@@ -36,7 +36,7 @@ func delayedMEC(data: [String: String]) -> Bool{
             }
         }
     } else {
-        if data["anxiety"] == "0" {
+        if data["anxiety"] == "1" {
             //yes
             if data["prior_cinv"] == "1" {
                 //yes
@@ -61,7 +61,7 @@ func delayedMEC(data: [String: String]) -> Bool{
                         return false
                     }
                 case "2"?:
-                    if data["sex"] == "0" {
+                    if data["sex"] == "M" {
                         return true
                     } else {
                         return false
@@ -75,7 +75,7 @@ func delayedMEC(data: [String: String]) -> Bool{
                 }
             } else {
                 //no
-                if data["current_smoker"] == "1" {
+                if data["current_smoker"] == "0" {
                     return false
                 } else {
                     if data["alcohol_consumption"] == "0" {
@@ -93,8 +93,8 @@ func delayedMEC(data: [String: String]) -> Bool{
 
 
 func acuteMEC(data: [String: String]) -> Bool{
-    if data["anxiety"] == "0" {
-        if data["dehydration"] == "0" {
+    if data["anxiety"] == "1" {
+        if data["dehydration"] == "1" {
             //y(340/11)
             return true
         } else {
@@ -111,7 +111,7 @@ func acuteMEC(data: [String: String]) -> Bool{
                         //n(7.0)
                         return false
                     } else {
-                        if data["current_smoker"] == "1" {
+                        if data["current_smoker"] == "0" {
                             //y(3.0)
                             return true
                         } else {
@@ -135,8 +135,8 @@ func acuteMEC(data: [String: String]) -> Bool{
         }
     } else {
         if data["prior_cinv"] == "1" {
-            if data["dehydration"] == "0" {
-                if data["current_smoker"] == "0" {
+            if data["dehydration"] == "1" {
+                if data["current_smoker"] == "1" {
                     //y(38/4)
                     return true
                 } else {
@@ -162,14 +162,14 @@ func acuteMEC(data: [String: String]) -> Bool{
 func acuteLEC(data: [String: String]) -> Bool {
     if data["prior_cinv"] == "1" {
         //yes
-        if data["current_smoker"] == "0" {
+        if data["current_smoker"] == "1" {
             //y(38/4)
             return true
         } else {
             //no
-            if data["anxiety"] == "0" {
+            if data["anxiety"] == "1" {
                 //yes dehyd
-                if data["dehydration"] == "0" {
+                if data["dehydration"] == "1" {
                     //yes
                     return true
                 } else {
@@ -200,13 +200,13 @@ func acuteLEC(data: [String: String]) -> Bool {
         }
     } else {
         //no
-        if data["current_smoker"] == "0" {
+        if data["current_smoker"] == "1" {
             //yes dehydration
-            if data["dehydration"] == "0" {
+            if data["dehydration"] == "1" {
                 //yes
                 return true
             } else {
-                if data["anxiety"] == "0" {
+                if data["anxiety"] == "1" {
                     switch data["number_of_prior_chemo"] {
                     case "0"?:
                         return false
@@ -249,10 +249,10 @@ func delayLEC(data: [String: String]) -> Bool {
     case "0"?:
         if data["prior_cinv"] == "1" {
             //yes smoker
-            if data["current_smoker"] == "0" {
+            if data["current_smoker"] == "1" {
                 //yes bmi
                 if Int(data["bmi"]!) > 36 {
-                    if data["dehydration"] == "0" {
+                    if data["dehydration"] == "1" {
                         return true
                     } else {
                         return false
@@ -262,11 +262,11 @@ func delayLEC(data: [String: String]) -> Bool {
                 }
             } else {
                 //no anxiety
-                if data["anxiety"] == "0" {
+                if data["anxiety"] == "1" {
                     if data["alcohol_consumption"] == "0" {
                         return true
                     } else {
-                        if data["sex"] == "0" {
+                        if data["sex"] == "M" {
                             return false
                         } else {
                             return true
@@ -278,9 +278,9 @@ func delayLEC(data: [String: String]) -> Bool {
             }
         } else {
             //no dehyd
-            if data["dehydration"] == "0"{
+            if data["dehydration"] == "1"{
                 if data["alcohol_consumption"] == "0" {
-                    if data["sex"] == "0" {
+                    if data["sex"] == "M" {
                         //Male
                         return false
                     } else {
@@ -294,15 +294,15 @@ func delayLEC(data: [String: String]) -> Bool {
             }
         }
     case "1"?:
-        if data["dehydration"] == "0"{
+        if data["dehydration"] == "1"{
             //yes
             return true
         } else {
-            if data["current_smoker"] == "0" {
+            if data["current_smoker"] == "1" {
                 if Int(data["bmi"]!) > 36 {
                     return true
                 } else {
-                    if data["anxiety"] == "0"{
+                    if data["anxiety"] == "1"{
                         return true
                     } else {
                         return false
@@ -325,14 +325,14 @@ func delayLEC(data: [String: String]) -> Bool {
 
 
 func acuteHEC(data: [String: String]) -> Bool {
-    if data["dehydration"] == "0" {
-        if data["anxiety"] == "0" {
+    if data["dehydration"] == "1" {
+        if data["anxiety"] == "1" {
             return true
         } else {
             if data["prior_cinv"] == "1" {
                 return true
             } else {
-                if data["current_smoker"] == "0" {
+                if data["current_smoker"] == "1" {
                     if Int(data["bmi"]!) > 28 {
                         return false
                     } else {
@@ -345,8 +345,8 @@ func acuteHEC(data: [String: String]) -> Bool {
         }
     } else {
         if data["prior_cinv"] == "1" {
-            if data["anxiety"] == "0" {
-                if data["current_smoker"] == "0" {
+            if data["anxiety"] == "1" {
+                if data["current_smoker"] == "1" {
                     return true
                 } else {
                     switch data["number_of_prior_chemo"] {
@@ -379,12 +379,12 @@ func acuteHEC(data: [String: String]) -> Bool {
 
 
 func delayHEC(data: [String: String]) -> Bool {
-    if data["dehydration"] == "0" {
+    if data["dehydration"] == "1" {
         switch data["number_of_comorbidities"] {
         case "1"?:
-            if data["current_smoker"] == "0" {
+            if data["current_smoker"] == "1" {
                 //anx
-                if data["anxiety"] == "0" {
+                if data["anxiety"] == "1" {
                     if data["prior_cinv"] == "1" {
                         return true
                     } else {
@@ -413,10 +413,10 @@ func delayHEC(data: [String: String]) -> Bool {
                 }
             }
         case "2"?:
-            if data["anxiety"] == "0" {
+            if data["anxiety"] == "1" {
                 return true
             } else {
-                if data["current_smoker"] == "0" {
+                if data["current_smoker"] == "1" {
                     return false
                 } else {
                     switch data["stage_of_cancer"] {
@@ -432,7 +432,7 @@ func delayHEC(data: [String: String]) -> Bool {
                         if data["prior_cinv"] == "1" {
                             return false
                         } else {
-                            if data["sex"] == "0" {
+                            if data["sex"] == "M" {
                                 if Int(data["age"]!) > 55 {
                                     return false
                                 } else {
@@ -450,17 +450,17 @@ func delayHEC(data: [String: String]) -> Bool {
                 }
             }
         case "3"?:
-            if data["current_smoker"] == "0" {
+            if data["current_smoker"] == "1" {
                 return true
             } else {
                 switch data["race"] {
-                case "0"?:
+                case "A"?:
                     return false
-                case "1"?:
+                case "H"?:
                     return false
-                case "2"?:
+                case "W"?:
                     return true
-                case "3"?:
+                case "B"?:
                     return false
                 default:
                     return false
@@ -476,8 +476,8 @@ func delayHEC(data: [String: String]) -> Bool {
         case "1"?:
             return false
         case "2"?:
-            if data["anxiety"] == "0" {
-                if data["current_smoker"] == "0" {
+            if data["anxiety"] == "1" {
+                if data["current_smoker"] == "1" {
                     return true
                 } else {
                     return false

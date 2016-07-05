@@ -42,10 +42,10 @@ public var SurveyTask: ORKOrderedTask {
     //Race
     let raceQuestionStepTitle = "Race"
     let raceChoices = [
-        ORKTextChoice(text: "Asian", value: 0),
-        ORKTextChoice(text: "Hispanic", value: 1),
-        ORKTextChoice(text: "White", value: 2),
-        ORKTextChoice(text: "Afircan American", value: 3)
+        ORKTextChoice(text: "Asian", value: "A"),
+        ORKTextChoice(text: "Hispanic", value: "H"),
+        ORKTextChoice(text: "White", value: "W"),
+        ORKTextChoice(text: "Afircan American", value: "B")
     ]
     let raceAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormatWithStyle(.SingleChoice, textChoices:raceChoices)
     let raceQuestionStep = ORKQuestionStep(identifier: "race", title: raceQuestionStepTitle, answer: raceAnswerFormat)
@@ -146,8 +146,8 @@ public var SurveyTask: ORKOrderedTask {
     //Dehydration Step
     let dehydrationQuestionStepTitle = "Did the patient have Dehydration during Chemotherapy?"
     let dehydrationChoices = [
-        ORKTextChoice(text: "Yes", value: 0),
-        ORKTextChoice(text: "No", value: 1)
+        ORKTextChoice(text: "Yes", value: 1),
+        ORKTextChoice(text: "No", value: 0)
         
     ]
     let dehydrationAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormatWithStyle(.SingleChoice, textChoices: dehydrationChoices)
@@ -159,8 +159,8 @@ public var SurveyTask: ORKOrderedTask {
     //Anxiety
     let anxietyQuestionStepTitle = "Did the patient have Anxiety during Chemotherapy?"
     let anxietyChoices = [
-        ORKTextChoice(text: "Yes", value: 0),
-        ORKTextChoice(text: "No", value: 1)
+        ORKTextChoice(text: "Yes", value: 1),
+        ORKTextChoice(text: "No", value: 0)
         
     ]
     let anxietyAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormatWithStyle(.SingleChoice, textChoices: anxietyChoices)
@@ -171,8 +171,8 @@ public var SurveyTask: ORKOrderedTask {
     //Smoker
     let smokerQuestionStepTitle = "Is the Patient a Current Smoker?"
     let smokerChoices = [
-        ORKTextChoice(text: "Yes", value: 0),
-        ORKTextChoice(text: "No", value: 1)
+        ORKTextChoice(text: "Yes", value: 1),
+        ORKTextChoice(text: "No", value: 0)
         
     ]
     let smokerAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormatWithStyle(.SingleChoice, textChoices: smokerChoices)
