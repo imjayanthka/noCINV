@@ -10,8 +10,8 @@ import Foundation
 import SwiftHTTP
 
 class HttpPost {
-    private let tokenAPI = "B2ACF660FF6976BF379BF902C5A6234D"
-    private let URL = "https://redcap-dev.umh.edu/api/"
+    private let tokenAPI = ""
+    private let URL = ""
     private let content = "record"
     private let format = "xml"
     private let type = "flat"
